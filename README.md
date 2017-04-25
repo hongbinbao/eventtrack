@@ -35,13 +35,20 @@
     python manage.py shell
 
 #### 数据库迁移
+
     python manage.py db migrate -m "database change note"
     python manage.py db upgrade
     
 #### 服务器启动
+
     cd eventtrack
     source flask_venv/bin/active
-    PROJECT_CONFIG=development python manage.py runserver
+    
+    export PROJECT_CONFIG=development
+    export MAIL_USERNAME=xxxxx
+    export MAIL_UPASSWORD=xxxxx
+    
+    python manage.py runserver
     
     usage: python manage.py runserver [-?] [-h HOST] [-p PORT] [--threaded]
                            [--processes PROCESSES] [--passthrough-errors] [-d]
