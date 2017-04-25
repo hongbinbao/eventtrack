@@ -41,6 +41,8 @@
 #### 服务器启动
     cd eventtrack
     source flask_venv/bin/active
+    PROJECT_CONFIG=development python manage.py runserver
+    
     usage: python manage.py runserver [-?] [-h HOST] [-p PORT] [--threaded]
                            [--processes PROCESSES] [--passthrough-errors] [-d]
                            [-D] [-r] [-R]
