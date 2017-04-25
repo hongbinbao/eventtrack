@@ -20,7 +20,7 @@ manager.add_command('db', MigrateCommand)
 
 
 '''
-SQL test shoul created by admin
+if use mysql as your DB. should create database "unittest_userdb" by admin
 CREATE DATABASE unittest_userdb CHARACTER SET utf8;
 '''
 @manager.command
