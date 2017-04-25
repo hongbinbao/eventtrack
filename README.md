@@ -1,8 +1,9 @@
-# Purpose
+#### Required Software
 
-    python project demo
+  * Python 2.7.x
+  * Linux VM (test on ubuntu 14.04 64 bit)
 
-# pip && virtualenv install
+#### Required Tool
 
     pip:
     wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate
@@ -15,29 +16,31 @@
     确认安装成功:
     pip show virtualenv
 
-# 依赖包安装
+#### 依赖包安装
     
     pip install -r requirements.txt
     
     (re-generate requirements.txt if update "pip freeze > requirements.txt")
 
-# 数据库初始化
+#### 数据库初始化
 
     python manager.py db upgrade
 
-# 测试
+##### 测试
 
     python manage.py test
     
-# 命令行调试
+##### 命令行调试
 
     python manage.py shell
 
-# 数据库迁移
+#### 数据库迁移
     python manage.py db migrate -m "database change note"
     python manage.py db upgrade
     
-# 服务器启动
+#### 服务器启动
+    cd eventtrack
+    source flask_venv/bin/active
     usage: python manage.py runserver [-?] [-h HOST] [-p PORT] [--threaded]
                            [--processes PROCESSES] [--passthrough-errors] [-d]
                            [-D] [-r] [-R]
